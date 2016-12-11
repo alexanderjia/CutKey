@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"
+            android:text="11"
+            android:textColor="@color/list_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_carfactory"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:text="22"
+            android:textColor="@color/list_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_toothcode"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/list_text"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tv_begindate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/list_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_finishdate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/list_text"
+            android:textSize="18sp" />
+        <!--
+                <TextView
+                    android:id="@+id/tv_sequence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_no"
+                    android:layout_toRightOf="@+id/tv_finishdate"
+                    android:textColor="@color/list_text"
+                    android:textSize="18sp" />
+                    -->
+
+        <TextView
+            android:id="@+id/tv_keysembryowidth"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/list_text"
+            android:textSize="18sp" />
+        <!--
+<TextView
+    android:id="@+id/tv_keysembryo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    android:layout_toRightOf="@+id/tv_keysembryowidth"
+    android:layout_alignBaseline="@+id/tv_no"
+    android:textColor="@color/list_text"
+    android:layout_marginLeft="75dp"/>
+    -->
+        <TextView
+            android:id="@+id/tv_teeth"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_fixtrue"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_processdate"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+</RelativeLayout>

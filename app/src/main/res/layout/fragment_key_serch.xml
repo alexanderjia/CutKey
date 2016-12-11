@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    tools:context="com.example.zhangjia.cutkey.fragment.KeySerchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="16dp">
+
+                <com.example.zhangjia.cutkey.view.EditTextWithDel
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_border_grey"
+                    android:hint="搜索车厂"
+                    android:singleLine="true"
+                    android:textSize="14dp" />
+                <ImageView
+                    android:id="@+id/img_pw"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/drop"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"/>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/btn_serch"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="#fc603f"
+                android:text="确定"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总条目数量:"
+                android:textColor="@color/biaoti"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/tv_result_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_contact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f0f0f0"
+                android:layout_gravity="center"
+                android:divider="@null"
+                android:scrollbars="none"
+                android:choiceMode="singleChoice"/>
+
+            <TextView
+                android:id="@+id/dialog"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_slide_grey"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.example.zhangjia.cutkey.view.SideBar
+                android:id="@+id/sidrbar"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

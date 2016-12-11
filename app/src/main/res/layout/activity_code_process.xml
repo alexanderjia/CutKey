@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zhangjia.cutkey.function.ToothProcessActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_prcess_head"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="总条目数量:"
+            android:textColor="#252525"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_result_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="@color/orange"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_serch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/mohubutton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="钥匙查找"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/fengge1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/ll_prcess_head"
+        android:layout_marginRight="20dp"
+        android:background="#eaeef1" />
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_below="@+id/fengge1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车厂"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="齿形码"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始序列"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束序列"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <!--
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="序列数量"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="钥匙胚宽度"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+        <!--
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="钥匙胚"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="齿数"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="夹具"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="48dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加工日期"
+                android:textSize="18sp"
+                android:textColor="@color/list_text"
+                android:drawableRight="@drawable/arrow"
+                android:layout_gravity="center_vertical"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:layout_marginLeft="48dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fengge"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/ll_head"
+        android:layout_marginRight="20dp"
+        android:background="#eaeef1" />
+
+    <ListView
+        android:id="@+id/lv_key"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/fengge"
+        android:divider="#edf2f2"
+        android:dividerHeight="2dp"></ListView>
+
+    <View
+        android:id="@+id/fengge2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/lv_key"
+        android:background="#f1f1f1" />
+
+    <LinearLayout
+        android:id="@+id/ll_process"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fengge2"
+        android:layout_marginBottom="150dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+
+
+                <com.example.zhangjia.cutkey.view.ProcessView
+                    android:id="@+id/myview"
+                    android:layout_width="500dp"
+                    android:layout_height="115dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="30dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_tool_tittle"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/theme">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="HU66"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_tool_tittle"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_tool"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="锉刀直径:"
+                            android:textColor="@color/list_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_tool_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_tool"
+                            android:layout_toRightOf="@+id/tv_tool"
+                            android:text="0.00"
+                            android:textColor="@color/list_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_tool"
+                            android:layout_toRightOf="@+id/tv_tool_num"
+                            android:text="mm"
+                            android:textColor="@color/list_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_deep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_tool"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="切割深度:"
+                            android:textColor="@color/list_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_deep_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_deep"
+                            android:layout_toRightOf="@+id/tv_deep"
+                            android:text="0.00"
+                            android:textColor="@color/list_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_deep"
+                            android:layout_toRightOf="@+id/tv_deep_num"
+                            android:text="mm"
+                            android:textColor="@color/list_text"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_align"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/theme">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="对齐线"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@+id/rl_align"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/align" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/rl_title"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="请输钥匙编码"
+            android:textColor="@color/biaoti"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_inputed"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edixbg_shape"
+            android:layout_below="@+id/tv_input"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="更新"
+            android:background="@color/btnbg"
+            android:textColor="@color/white"
+            android:layout_below="@+id/tv_input"
+            android:layout_toRightOf="@+id/et_inputed"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+      
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/theme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="钥匙加工"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+    </RelativeLayout>
+</RelativeLayout>

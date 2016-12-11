@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="half_transparent">#4000</color>
+    <color name="transparent">#00000000</color>
+    <color name="theme">#6495ed</color>
+    <color name="white">#ffffff</color>
+    <color name="app_color">#F55813</color>
+    <color name="grey">#5A5A5A</color>
+    <color name="orange">#ff5f3e</color>
+    <color name="list_text">#666666</color>
+    <color name="biaoti">#333333</color>
+    <color name="whitetrans">#bababa</color>
+    <color name="notice">#999999</color>
+    <color name="processtext">#b9b8b8</color>
+    <color name="editbackground">#eaeef1</color>
+    <color name="btnbg">#4cd964</color>
+    <color name="red">#e70909</color>
+    <color name="item_press">#eeeeee</color>
+    <color name="et_hint">#dadada</color>
+</resources>

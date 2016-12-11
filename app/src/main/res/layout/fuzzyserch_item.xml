@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:text="11"
+            android:textColor="@color/list_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_serial_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_no"
+            android:layout_toRightOf="@+id/tv_no"
+            android:layout_weight="0.9"
+            android:text="22"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_key_width"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_no"
+            android:layout_toRightOf="@+id/tv_serial_id"
+            android:layout_weight="1"
+            android:text="11"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_cuts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_no"
+            android:layout_toRightOf="@+id/tv_key_width"
+            android:layout_weight="1.2"
+            android:text="11"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_serial_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_no"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/tv_cuts"
+            android:layout_weight="1.5"
+            android:text="22"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_serial_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_no"
+            android:layout_toRightOf="@+id/tv_serial_start"
+            android:layout_weight="1.5"
+            android:text="11"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_serial_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_no"
+            android:layout_toRightOf="@+id/tv_serial_end"
+            android:layout_weight="1"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_jaw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_no"
+            android:layout_toRightOf="@+id/tv_serial_count"
+            android:layout_weight="1"
+            android:text="11"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_bool"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_no"
+            android:layout_toRightOf="@+id/tv_jaw"
+            android:layout_weight="1"
+            android:text="11"
+            android:textColor="@color/list_text"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="right"/>
+
+        <RadioButton
+            android:id="@+id/rb_select"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="70dp"
+            android:layout_toRightOf="@+id/tv_bool"
+            android:layout_gravity="center"
+            android:background="@drawable/radio_select"
+            android:button="@null"
+            android:enabled="false"
+            android:focusable="false" />
+    </LinearLayout>
+</LinearLayout>

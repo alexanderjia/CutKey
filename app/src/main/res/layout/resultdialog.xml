@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textColor="@color/list_text"
+        android:textSize="18sp"
+        android:text="系统无法探测到有效的钥匙请确认钥匙是否安放正确，请重新安放好钥匙再开始加工，如果想取消加工请点击放弃"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+      >
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/biaoti"
+            android:background="@drawable/item_selector"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="取消"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/et_hint"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/item_selector"
+            android:layout_weight="1"
+            android:textColor="@color/biaoti"
+            android:textSize="16sp"
+            android:text="确定"/>
+    </LinearLayout>
+
+</LinearLayout>
